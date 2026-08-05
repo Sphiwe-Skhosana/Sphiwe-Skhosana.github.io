@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a Lecturer in the [Department of Statistics](https://www.up.ac.za/statistics) at the University of Pretoria, and a member of the [MBC@UP](https://www.up.ac.za/statistics/mbcup-model-based-clustering-research-group) model-based clustering research group. I completed my PhD at the University of Pretoria in 2024, supported by the Department of Higher Education and Training's nGAP programme.
+I am a Lecturer in the [Department of Statistics](https://www.up.ac.za/statistics) at the University of Pretoria, and a principal member of the research groups: [MBC@UP](https://www.up.ac.za/statistics/mbcup-model-based-clustering-research-group), [AdvDS@UP](https://www.up.ac.za/statistics/advdsup-advances-directional-statistics) and [ML4PH@UP](https://www.up.ac.za/statistics/ml4phup-machine-learning-public-health). I completed my PhD at the University of Pretoria in 2024, supported by the Department of Higher Education and Training's nGAP programme.
 
-My research sits at the intersection of **finite mixture modelling** and **flexible regression**. Broadly, I am interested in what happens when a population is made up of unobserved subpopulations and the relationships within those subpopulations are not well described by a straight line. This raises three recurring problems that run through most of my work: how to estimate such models reliably, how to keep the estimates stable when the data are contaminated, and how to decide how many subpopulations there are in the first place.
+My research sits at the intersection of **finite mixture modelling**, **nonparametric regressions** and **computational statistics**. Broadly, I am interested in what happens when a population is made up of unobserved subpopulations and the relationships within those subpopulations are not well described by a straight line. This raises three recurring problems that run through most of my work: how to estimate such models reliably, how to keep the estimates stable when the data are contaminated, and how to decide how many subpopulations there are in the first place.
 
 ## Research interests
 
@@ -31,4 +31,4 @@ Code accompanying my papers is released on [GitHub](https://github.com/Sphiwe-Sk
 
 ## Get in touch
 
-I welcome enquiries from prospective postgraduate students interested in mixture models, computational statistics, or statistical learning. Email is the best way to reach me.
+I welcome enquiries from prospective postgraduate students interested in mixture models, computational statistics, or statistical learning. Email is the best way to reach me [Contact Me](mailto:spiwe.skhosana@up.ac.za).
