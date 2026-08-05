@@ -1,0 +1,88 @@
+/* ==========================================================================
+   CUSTOM OVERRIDES
+   Paste the contents of this file at the BOTTOM of assets/css/main.scss in
+   your repository (below all the existing @import lines). Do not replace
+   main.scss with this file — the imports above it are what load the theme.
+
+   These are deliberately minimal. The aim is readability for long, technical,
+   equation-heavy pages, not a redesign.
+   ========================================================================== */
+
+/* --- Reading measure -----------------------------------------------------
+   The theme's default body text runs wide on large monitors. Capping the
+   measure at roughly 68 characters cuts the eye's return distance and makes
+   dense methodological prose noticeably easier to track.                    */
+.page__content {
+  p, li, dd {
+    max-width: 68ch;
+  }
+
+  /* Tables, figures and equations are exempt — they need the full width. */
+  table, .figure, mjx-container[jax="CHTML"][display="true"] {
+    max-width: none;
+  }
+}
+
+/* --- Display equations ---------------------------------------------------
+   Long derivations overflow on narrow screens. Allow horizontal scroll on the
+   equation itself rather than letting it break the page layout.             */
+mjx-container[jax="CHTML"][display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25em 0;
+}
+
+/* --- Publication list ----------------------------------------------------
+   Separate entries with space rather than rules. A dense list of citations
+   reads better when the grouping is done by whitespace.                     */
+.list__item {
+  margin-bottom: 1.6em;
+
+  .archive__item-title {
+    margin-top: 0;
+    line-height: 1.35;
+  }
+
+  .archive__item-excerpt {
+    font-size: 0.85em;
+    line-height: 1.55;
+  }
+}
+
+/* --- Venue emphasis ------------------------------------------------------
+   Italic venue names inside citations are the single most scanned element on
+   a publications page. Keep them legible rather than decorative.            */
+.archive__item-excerpt i,
+.archive__item-excerpt em {
+  font-style: italic;
+  color: inherit;
+}
+
+/* --- Code blocks ---------------------------------------------------------
+   R snippets should not wrap mid-expression.                                */
+.page__content pre > code {
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* --- Sidebar bio ---------------------------------------------------------
+   Slightly tighter leading so the bio does not dominate the first screen.   */
+.author__bio {
+  line-height: 1.45;
+}
+
+/* --- Print ---------------------------------------------------------------
+   People do print CVs. Drop navigation and sidebar chrome when they do.     */
+@media print {
+  .masthead,
+  .page__footer,
+  .author__urls-wrapper,
+  .page__share {
+    display: none;
+  }
+
+  .page__content p,
+  .page__content li {
+    max-width: none;
+  }
+}

@@ -9,56 +9,52 @@ redirect_from:
 
 {% include base_path %}
 
+A PDF version of my full CV is available [here](/files/cv.pdf). TODO — drop your CV into the `files/` folder as `cv.pdf`, or delete this line.
+
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* PhD in Statistics, University of Pretoria, 2024
+* TODO — MSc, institution, year
+* TODO — BSc (Hons), institution, year
 
-Work experience
+Appointments
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Lecturer, Department of Statistics, University of Pretoria
+* TODO — add previous positions with dates
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+Research interests
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Finite mixture models: parametric, semi-parametric and non-parametric
+* EM and ECM algorithm theory and implementation
+* Varying-coefficient and local-likelihood methods
+* Robust estimation using contaminated Gaussian components
+* Directional (circular and spherical) statistics
+* Applications in energy, environmental and development economics
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
+<ul>{% for post in site.publications reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul>
+
 Talks
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
+<ul>{% for post in site.talks reversed %}
+  {% include archive-single-talk-cv.html %}
+{% endfor %}</ul>
+
 Teaching
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
+<ul>{% for post in site.teaching reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul>
+
+Funding and awards
 ======
-* Currently signed in to 43 different slack teams
+* nGAP programme, Department of Higher Education and Training, South Africa
+* TODO — add grants, awards and scholarships
+
+Service
+======
+* Member, MBC@UP model-based clustering research group, University of Pretoria
+* TODO — add journal refereeing, committee work, outreach
