@@ -2,12 +2,11 @@
 title: Teaching
 permalink: /teaching/
 ---
-
 ## University of Pretoria
 
 STC 137
-: Foundational statistics
+: Foundational Statistics
 
 MET 720
-: Mathematical statistics
+: Statistical Inference
 
