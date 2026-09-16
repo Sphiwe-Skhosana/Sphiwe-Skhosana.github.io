@@ -1,0 +1,54 @@
+{%- assign ap = site.appearance -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+{% seo %}
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+{%- if ap.font != "system" %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{%- if ap.font == "sans" %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400..700;1,400..700&display=swap">
+{%- else %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..700&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap">
+{%- endif %}
+{%- endif %}
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<style>
+{%- for p in site.data.palettes %}
+[data-palette="{{ p[0] }}"] { --accent-l: {{ p[1].light }}; --accent-d: {{ p[1].dark }}; }
+{%- endfor %}
+{%- if ap.accent and ap.accent != "" %}
+:root:not([data-preview]) { --accent-l: {{ ap.accent }}; --accent-d: {% if ap.accent_dark and ap.accent_dark != "" %}{{ ap.accent_dark }}{% else %}{{ ap.accent }}{% endif %}; }
+{%- unless ap.accent_dark and ap.accent_dark != "" %}
+@supports (color: color-mix(in srgb, red 50%, blue)) {
+  :root:not([data-preview]) { --accent-d: color-mix(in srgb, {{ ap.accent }} 55%, #fff); }
+}
+{%- endunless %}
+{%- endif %}
+</style>
+<script>
+  // Runs before the page paints, so there is no flash of the wrong theme.
+  (function () {
+    var root = document.documentElement;
+    root.classList.add("js");
+    try {
+      // Preview any palette with ?palette=name (lasts for this browser tab; ?palette= clears it).
+      var query = new URLSearchParams(location.search);
+      if (query.has("palette")) {
+        var name = query.get("palette");
+        name ? sessionStorage.setItem("palette", name) : sessionStorage.removeItem("palette");
+      }
+      var preview = sessionStorage.getItem("palette");
+      if (preview) { root.setAttribute("data-palette", preview); root.setAttribute("data-preview", ""); }
+      // A visitor's own light/dark choice wins over the site default.
+      var saved = localStorage.getItem("mode");
+      if (saved === "light" || saved === "dark") root.setAttribute("data-mode", saved);
+    } catch (e) {}
+  })();
+</script>
+{%- if page.math %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" onload="renderMathInElement(document.getElementById('main'))"></script>
+{%- endif %}

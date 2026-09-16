@@ -1,0 +1,13 @@
+---
+title: CV
+permalink: /cv/
+---
+{%- assign cv = site.static_files | where: "path", "/files/cv.pdf" | first %}
+{%- if cv %}
+<p><a class="button" href="{{ cv.path | relative_url }}" download>Download CV (PDF)</a></p>
+<object class="cv-embed" data="{{ cv.path | relative_url }}" type="application/pdf" aria-label="CV">
+<p>This browser can't show the PDF here. <a href="{{ cv.path | relative_url }}">Open the CV</a>.</p>
+</object>
+{%- else %}
+<p>Upload your CV as <code>files/cv.pdf</code> and it will appear here and in the header.</p>
+{%- endif %}

@@ -1,0 +1,9 @@
+{%- assign n = site.data.news | size -%}
+{%- if n > 0 -%}
+<h2 id="news">News</h2>
+<ul class="dated-list">
+{%- for item in site.data.news limit: 8 %}
+<li><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%b %Y" }}</time><div>{{ item.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</div></li>
+{%- endfor %}
+</ul>
+{%- endif -%}

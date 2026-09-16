@@ -1,0 +1,13 @@
+# Accent colours for links, the header mark and highlights.
+# `light` is used on the light background, `dark` on the dark background.
+# To add a palette, copy a line, rename it, and set `palette:` in _config.yml.
+# Keep contrast of at least 4.5:1 against white (light) and #16181d (dark).
+
+jacaranda: { light: "#5b3d94", dark: "#bca5ea" }
+navy:      { light: "#1c4d8f", dark: "#94b8ee" }
+teal:      { light: "#0b6a6a", dark: "#72cfc7" }
+forest:    { light: "#2d673a", dark: "#92d09f" }
+crimson:   { light: "#a1233a", dark: "#f2929f" }
+ochre:     { light: "#865709", dark: "#e3b462" }
+slate:     { light: "#43536a", dark: "#adbacb" }
+ink:       { light: "#1b1e24", dark: "#e4e6ea" }

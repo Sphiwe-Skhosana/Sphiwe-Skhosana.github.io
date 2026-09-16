@@ -1,0 +1,40 @@
+# `paper` links to an entry in publications.yml by its id.
+# Leave `url` empty to show the name without a link.
+
+- name: MixCircReg
+  url: https://github.com/Sphiwe-Skhosana/MixCircReg
+  description: Fits mixtures of circular regressions with circular and linear covariates using the EM algorithm.
+  language: R
+  paper: skhosana2026circular
+
+- name: SPGMNRs
+  url: https://github.com/Sphiwe-Skhosana/SPGMNRs_Model
+  description: >-
+    Fits semi-parametric Gaussian mixtures of non-parametric regressions with a model-based ECM algorithm,
+    alongside the local EM and naive EM algorithms for comparison.
+  language: R
+  paper: skhosana2024modified
+
+- name: NPCGMRs
+  url: https://github.com/Sphiwe-Skhosana/NPCGMRs_model
+  description: Code and data for nonparametric contaminated Gaussian mixtures of regressions.
+  language: R
+  paper: skhosana2026nonparametric
+
+- name: S-CG-MoLE
+  url: https://github.com/Sphiwe-Skhosana/S-CG-MoLE
+  description: Fits robust semi-parametric mixtures of linear experts with contaminated Gaussian errors.
+  language: R
+  paper: mambondimumwe2026robust
+
+# Not yet public. Remove the # signs once each repository is online.
+
+# - name: DeepVCM
+#   url: https://github.com/Sphiwe-Skhosana/DeepVCM   # check the address
+#   description: Mixtures of varying-coefficient models for binary responses, fitted with a neural-network EM algorithm.
+#   language: R
+
+# - name: KernelVCM.Fit
+#   url: https://github.com/Sphiwe-Skhosana/KernelVCM.Fit   # check the address
+#   description: One-sentence description of the package.
+#   language: R

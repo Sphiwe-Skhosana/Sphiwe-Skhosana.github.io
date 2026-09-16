@@ -1,0 +1,71 @@
+# Newest first within each type. The Publications page groups entries by `type`:
+#   article | preprint | chapter | proceedings
+# Optional links: doi (without https://doi.org/), arxiv (id only), pdf, code, slides.
+# `id` must be unique: the Research and Software pages link to papers by id.
+
+- id: harris2026deep
+  type: article
+  title: Deep learning embedded latent class joint modelling of time-to-event and longitudinal data
+  authors: Harris, T. J. E., Nakhaei Rad, N., & Skhosana, S. B.
+  year: 2026
+  venue: Statistical Methods in Medical Research
+  details: online ahead of print
+  doi: 10.1177/09622802261465334
+
+- id: skhosana2026circular
+  type: article
+  title: Model-based clustering using a new mixture of circular regressions
+  authors: Skhosana, S. B., & Nakhaei Rad, N.
+  year: 2026
+  venue: Advances in Data Analysis and Classification
+  doi: 10.1007/s11634-026-00673-w
+  arxiv: 2601.05345
+  code: https://github.com/Sphiwe-Skhosana/MixCircReg
+
+- id: skhosana2024modified
+  type: article
+  title: A modified EM-type algorithm to estimate semi-parametric mixtures of non-parametric regressions
+  authors: Skhosana, S. B., Millard, S. M., & Kanfer, F. H. J.
+  year: 2024
+  venue: Statistics and Computing
+  details: 34, 125
+  doi: 10.1007/s11222-024-10435-3
+  code: https://github.com/Sphiwe-Skhosana/SPGMNRs_Model
+
+- id: skhosana2023novel
+  type: article
+  title: A novel EM-type algorithm to estimate semi-parametric mixtures of partially linear models
+  authors: Skhosana, S. B., Millard, S. M., & Kanfer, F. H. J.
+  year: 2023
+  venue: Mathematics
+  details: 11(5), 1087
+  doi: 10.3390/math11051087
+
+- id: skhosana2022fitting
+  type: article
+  title: "Fitting non-parametric mixture of regressions: Introducing an EM-type algorithm to address the label-switching problem"
+  authors: Skhosana, S. B., Kanfer, F. H. J., & Millard, S. M.
+  year: 2022
+  venue: Symmetry
+  details: 14(5), 1058
+  doi: 10.3390/sym14051058
+
+- id: skhosana2026nonparametric
+  type: preprint
+  title: Nonparametric contaminated Gaussian mixture of regressions
+  authors: Skhosana, S. B., & Yao, W.
+  year: 2026
+  venue: arXiv preprint
+  details: arXiv:2601.06695
+  arxiv: 2601.06695
+  code: https://github.com/Sphiwe-Skhosana/NPCGMRs_model
+
+- id: mambondimumwe2026robust
+  type: preprint
+  title: Robust semi-parametric mixtures of linear experts using the contaminated Gaussian distribution
+  authors: Mambondimumwe, P., Skhosana, S. B., & Nakhaei Rad, N.
+  year: 2026
+  venue: arXiv preprint
+  details: arXiv:2601.12425
+  arxiv: 2601.12425
+  code: https://github.com/Sphiwe-Skhosana/S-CG-MoLE

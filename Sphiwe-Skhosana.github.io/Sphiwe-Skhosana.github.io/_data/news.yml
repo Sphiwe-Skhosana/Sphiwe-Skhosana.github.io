@@ -1,0 +1,23 @@
+# Newest first. The home page shows the first 8. `text` accepts Markdown.
+
+- date: 2026-08-31
+  text: >-
+    I am spending the Fall 2026 semester at Michigan State University as a scholar in the
+    African Futures Research Leadership Program, run by the Alliance for African Partnership.
+
+- date: 2026-07-10
+  text: >-
+    [Deep learning embedded latent class joint modelling of time-to-event and longitudinal data](https://doi.org/10.1177/09622802261465334)
+    is published online in *Statistical Methods in Medical Research*.
+
+- date: 2026-01-18
+  text: >-
+    Three preprints on arXiv: [mixtures of circular regressions](https://arxiv.org/abs/2601.05345)
+    (since published in *Advances in Data Analysis and Classification*),
+    [nonparametric contaminated Gaussian mixtures of regressions](https://arxiv.org/abs/2601.06695),
+    and [robust semi-parametric mixtures of linear experts](https://arxiv.org/abs/2601.12425).
+
+- date: 2024-05-29
+  text: >-
+    [A modified EM-type algorithm to estimate semi-parametric mixtures of non-parametric regressions](https://doi.org/10.1007/s11222-024-10435-3)
+    is published in *Statistics and Computing*.

@@ -1,0 +1,21 @@
+<!doctype html>
+{%- assign ap = site.appearance -%}
+{%- assign mode = ap.mode | default: "auto" %}
+<html lang="{{ site.lang | default: 'en' }}" data-palette="{{ ap.palette | default: 'jacaranda' }}" data-font="{{ ap.font | default: 'serif' }}" data-mode-default="{{ mode }}"{% if mode == "light" or mode == "dark" %} data-mode="{{ mode }}"{% endif %}>
+<head>
+{% include head.html %}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+{% include masthead.html %}
+<div class="page">
+{% include sidebar.html %}
+<main id="main" class="content">
+<h1 class="page-title">{{ page.title }}</h1>
+{{ content }}
+</main>
+</div>
+{% include footer.html %}
+<script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+</body>
+</html>

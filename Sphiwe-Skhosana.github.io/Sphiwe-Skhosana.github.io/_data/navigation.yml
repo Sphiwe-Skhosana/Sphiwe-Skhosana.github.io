@@ -1,0 +1,21 @@
+# Header links, in order.
+# `hide_if_empty` keeps a link out of the header until its section has content:
+# a data file name (talks), `posts`, or a file path (/files/cv.pdf).
+
+- title: Research
+  url: /research/
+- title: Publications
+  url: /publications/
+- title: Talks
+  url: /talks/
+  hide_if_empty: talks
+- title: Software
+  url: /software/
+- title: Teaching
+  url: /teaching/
+- title: Posts
+  url: /posts/
+  hide_if_empty: posts
+- title: CV
+  url: /cv/
+  hide_if_empty: /files/cv.pdf

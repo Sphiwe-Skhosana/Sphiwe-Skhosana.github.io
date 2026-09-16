@@ -1,0 +1,58 @@
+<header class="masthead">
+<div class="masthead__inner">
+<a class="site-title" href="{{ '/' | relative_url }}">
+<svg class="mark" viewBox="0 0 40 24" aria-hidden="true" focusable="false"><path class="mark__area" d="M2 20.5L3 20.4L4 20.2L5 19.8L6 19L7 17.6L8 15.5L9 12.6L10 9.4L11 6.3L12 3.9L13 3L14 3.7L15 5.8L16 8.6L17 11.4L18 13.6L19 14.9L20 15.1L21 14.5L22 13.4L23 12.1L24 10.9L25 10L26 9.6L27 9.9L28 10.7L29 11.9L30 13.5L31 15L32 16.5L33 17.7L34 18.7L35 19.4L36 19.8L37 20.1L38 20.3L38 20.5Z"/><path class="mark__curve" d="M2 20.5L3 20.4L4 20.2L5 19.8L6 19L7 17.6L8 15.5L9 12.6L10 9.4L11 6.3L12 3.9L13 3L14 3.7L15 5.8L16 8.6L17 11.4L18 13.6L19 14.9L20 15.1L21 14.5L22 13.4L23 12.1L24 10.9L25 10L26 9.6L27 9.9L28 10.7L29 11.9L30 13.5L31 15L32 16.5L33 17.7L34 18.7L35 19.4L36 19.8L37 20.1L38 20.3"/><path class="mark__axis" d="M0.5 21.5H39.5"/></svg>
+<span>{{ site.title }}</span>
+</a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">{% include icon.html name="menu" %}<span>Menu</span></button>
+<nav id="site-nav" class="site-nav" aria-label="Main">
+<ul>
+{%- for item in site.data.navigation -%}
+{%- assign show = true -%}
+{%- assign key = item.hide_if_empty -%}
+{%- if key -%}
+  {%- assign first = key | slice: 0 -%}
+  {%- if key == "posts" -%}{%- assign n = site.posts | size -%}
+  {%- elsif first == "/" -%}{%- assign n = site.static_files | where: "path", key | size -%}
+  {%- else -%}{%- assign n = site.data[key] | size -%}{%- endif -%}
+  {%- if n == 0 -%}{%- assign show = false -%}{%- endif -%}
+{%- endif -%}
+{%- if show -%}
+{%- assign current = false -%}
+{%- if page.url == item.url or page.url contains item.url -%}{%- assign current = true -%}{%- endif %}
+<li><a href="{{ item.url | relative_url }}"{% if current %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+{%- endif -%}
+{%- endfor %}
+</ul>
+</nav>
+{%- if site.appearance.toggle != false %}
+<button class="mode-toggle" type="button" aria-label="Dark mode" aria-pressed="false" hidden>{% include icon.html name="moon" class="icon--moon" %}{% include icon.html name="sun" class="icon--sun" %}</button>
+{%- endif %}
+</div>
+</header>
+<script>
+  // Collapse the header links into a menu whenever they don't fit on one line.
+  (function () {
+    var root = document.documentElement, bar = document.querySelector(".masthead__inner");
+    var title = bar.querySelector(".site-title"), nav = bar.querySelector(".site-nav"), list = nav.querySelector("ul");
+    var mode = bar.querySelector(".mode-toggle"), dark = window.matchMedia("(prefers-color-scheme: dark)");
+    function middle(el) { var r = el.getBoundingClientRect(); return r.top + r.height / 2; }
+    function fit() {
+      root.classList.remove("nav-collapsed");
+      var first = list.firstElementChild;
+      var wraps = Math.abs(middle(nav) - middle(title)) > 8 ||
+        (first && list.offsetHeight > first.offsetHeight * 1.6) ||
+        (mode && Math.abs(middle(mode) - middle(title)) > 8);
+      root.classList.toggle("nav-collapsed", Boolean(wraps));
+    }
+    function syncMode() {
+      if (!mode) return;
+      var current = root.getAttribute("data-mode") || (dark.matches ? "dark" : "light");
+      mode.setAttribute("aria-pressed", String(current === "dark"));
+    }
+    if (mode) mode.hidden = false;
+    syncMode();
+    fit();
+    window.siteHeader = { fit: fit, syncMode: syncMode };
+  })();
+</script>

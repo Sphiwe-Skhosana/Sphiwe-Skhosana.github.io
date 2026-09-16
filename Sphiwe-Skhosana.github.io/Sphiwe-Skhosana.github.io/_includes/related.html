@@ -1,0 +1,9 @@
+{%- assign ids = include.ids | split: " " -%}
+<ul class="related">
+{%- for id in ids -%}
+{%- assign pub = site.data.publications | where: "id", id | first -%}
+{%- if pub -%}
+<li><a href="{{ '/publications/' | relative_url }}#{{ pub.id }}">{{ pub.title }}</a> <span class="related__venue">{{ pub.venue }}, {{ pub.year }}</span></li>
+{%- endif -%}
+{%- endfor -%}
+</ul>

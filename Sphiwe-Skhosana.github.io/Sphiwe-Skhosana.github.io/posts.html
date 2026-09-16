@@ -1,0 +1,13 @@
+---
+title: Posts
+permalink: /posts/
+---
+{%- if site.posts.size > 0 %}
+<ul class="dated-list">
+{%- for post in site.posts %}
+<li><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %Y" }}</time><div><a href="{{ post.url | relative_url }}">{{ post.title }}</a></div></li>
+{%- endfor %}
+</ul>
+{%- else %}
+<p>No posts yet.</p>
+{%- endif %}

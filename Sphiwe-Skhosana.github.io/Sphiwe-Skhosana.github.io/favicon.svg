@@ -1,0 +1,8 @@
+---
+layout: null
+sitemap: false
+---
+{%- assign ap = site.appearance -%}
+{%- assign pal = site.data.palettes[ap.palette] -%}
+{%- if ap.accent and ap.accent != "" %}{% assign fill = ap.accent %}{% else %}{% assign fill = pal.light | default: "#5b3d94" %}{% endif -%}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="{{ fill }}"/><path d="M5 23L5.6 22.9L6.2 22.7L6.8 22.4L7.4 21.7L8.1 20.6L8.7 18.8L9.3 16.5L9.9 13.8L10.5 11.2L11.1 9.3L11.7 8.5L12.3 9.1L12.9 10.8L13.6 13.1L14.2 15.5L14.8 17.3L15.4 18.3L16 18.5L16.6 18.1L17.2 17.1L17.8 16L18.4 15L19.1 14.3L19.7 14L20.3 14.2L20.9 14.9L21.5 15.9L22.1 17.2L22.7 18.5L23.3 19.7L23.9 20.7L24.6 21.5L25.2 22.1L25.8 22.5L26.4 22.7L27 22.8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>

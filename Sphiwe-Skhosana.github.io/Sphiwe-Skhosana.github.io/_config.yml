@@ -1,0 +1,72 @@
+# Site settings. After you commit a change, GitHub rebuilds the site in about a minute.
+
+title: Sphiwe Skhosana
+description: >-
+  Statistician at the University of Pretoria working on finite mixture models,
+  flexible regression and directional statistics.
+url: "https://sphiwe-skhosana.github.io"
+baseurl: ""
+lang: en-ZA
+
+# ── Appearance ────────────────────────────────────────────────────────────────
+appearance:
+  palette: jacaranda  # jacaranda | navy | teal | forest | crimson | ochre | slate | ink
+                      # Palettes live in _data/palettes.yml; add your own there.
+  accent: ""          # Any hex colour, e.g. "#0b6e4f". Overrides the palette when set.
+  accent_dark: ""     # Accent for dark mode. Derived from `accent` when left empty.
+  mode: auto          # auto (follows the visitor's device) | light | dark
+  toggle: true        # Show the light/dark switch in the header
+  font: serif         # serif (STIX Two Text) | sans (Hanken Grotesk) | system (no web fonts)
+
+# ── Profile (left sidebar) ────────────────────────────────────────────────────
+author:
+  name: Sphiwe Skhosana
+  citation_name: "Skhosana, S. B."  # Shown in bold in author lists
+  pronouns: ""                      # e.g. He/Him
+  role: Lecturer, Department of Statistics
+  institution: University of Pretoria
+  institution_url: https://www.up.ac.za
+  location: Pretoria, South Africa
+  avatar: ""   # e.g. /images/profile.jpg. Your initials are shown until you add a photo.
+  email: ""    # Shown as an "Email" link when set
+  # Shown in this order. Icons: googlescholar orcid github linkedin researchgate
+  # bluesky x mastodon youtube link
+  links:
+    - label: Google Scholar
+      icon: googlescholar
+      url: https://scholar.google.com/citations?user=tHMNOwwAAAAJ
+    - label: ORCID
+      icon: orcid
+      url: https://orcid.org/0000-0002-4740-7540
+    - label: GitHub
+      icon: github
+      url: https://github.com/Sphiwe-Skhosana
+    # - label: LinkedIn
+    #   icon: linkedin
+    #   url: https://www.linkedin.com/in/your-handle
+
+# ── Build settings (no need to edit) ──────────────────────────────────────────
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /posts/:year/:title/
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .jekyll-cache

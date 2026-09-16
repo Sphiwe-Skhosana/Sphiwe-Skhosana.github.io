@@ -1,0 +1,34 @@
+{%- assign a = site.author -%}
+<aside class="profile" aria-label="Profile">
+<div class="profile__avatar">
+{%- if a.avatar and a.avatar != "" -%}
+<img src="{{ a.avatar | relative_url }}" alt="{{ a.name }}" width="320" height="320">
+{%- else -%}
+{%- assign parts = a.name | split: " " -%}
+<span class="monogram" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+{%- endif -%}
+</div>
+<div class="profile__id">
+<p class="profile__name">{{ a.name }}</p>
+{%- if a.pronouns and a.pronouns != "" %}
+<p class="profile__pronouns">{{ a.pronouns }}</p>
+{%- endif %}
+{%- if a.role %}
+<p class="profile__role">{{ a.role }}</p>
+{%- endif %}
+</div>
+<ul class="profile__links">
+{%- if a.location %}
+<li>{% include icon.html name="map-pin" %}<span>{{ a.location }}</span></li>
+{%- endif %}
+{%- if a.institution %}
+<li>{% include icon.html name="landmark" %}{% if a.institution_url %}<a href="{{ a.institution_url }}">{{ a.institution }}</a>{% else %}<span>{{ a.institution }}</span>{% endif %}</li>
+{%- endif %}
+{%- if a.email and a.email != "" %}
+<li>{% include icon.html name="mail" %}<a href="mailto:{{ a.email }}">Email</a></li>
+{%- endif %}
+{%- for l in a.links %}
+<li>{% include icon.html name=l.icon %}<a href="{{ l.url }}">{{ l.label }}</a></li>
+{%- endfor %}
+</ul>
+</aside>

@@ -1,0 +1,17 @@
+{%- assign pub = include.pub -%}
+{%- assign authors = pub.authors | escape -%}
+{%- if site.author.citation_name -%}
+{%- capture me %}<strong>{{ site.author.citation_name }}</strong>{% endcapture -%}
+{%- assign authors = authors | replace: site.author.citation_name, me -%}
+{%- endif %}
+<li class="pub" id="{{ pub.id }}">
+<p class="pub__title">{{ pub.title }}</p>
+<p class="pub__cite">{{ authors }} ({{ pub.year }}). <em>{{ pub.venue }}</em>{% if pub.details %}, {{ pub.details }}{% endif %}.</p>
+<p class="links">
+{%- if pub.doi %}<a href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif -%}
+{%- if pub.arxiv %}<a href="https://arxiv.org/abs/{{ pub.arxiv }}">arXiv</a>{% endif -%}
+{%- if pub.pdf %}<a href="{{ pub.pdf | relative_url }}">PDF</a>{% endif -%}
+{%- if pub.code %}<a href="{{ pub.code }}">Code</a>{% endif -%}
+{%- if pub.slides %}<a href="{{ pub.slides | relative_url }}">Slides</a>{% endif -%}
+</p>
+</li>

@@ -1,0 +1,19 @@
+---
+title: Publications
+permalink: /publications/
+---
+{%- assign scholar = site.author.links | where: "icon", "googlescholar" | first %}
+{%- if scholar %}
+<p class="lede">The full list, with citations, is on <a href="{{ scholar.url }}">Google Scholar</a>.</p>
+{%- endif %}
+{%- assign groups = "article|Journal articles,preprint|Preprints,chapter|Book chapters,proceedings|Conference proceedings" | split: "," %}
+{%- for group in groups %}
+{%- assign g = group | split: "|" %}
+{%- assign pubs = site.data.publications | where: "type", g[0] %}
+{%- if pubs.size > 0 %}
+<h2>{{ g[1] }}</h2>
+<ul class="pubs">
+{%- for pub in pubs %}{% include publication.html pub=pub %}{% endfor %}
+</ul>
+{%- endif %}
+{%- endfor %}

@@ -1,0 +1,20 @@
+---
+title: Software
+permalink: /software/
+---
+<p class="lede">Code for the methods I develop.</p>
+<ul class="software">
+{%- for s in site.data.software %}
+{%- assign pub = site.data.publications | where: "id", s.paper | first %}
+<li>
+<h2 class="software__name">{% if s.url and s.url != "" %}<a href="{{ s.url }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h2>
+<p>{{ s.description }}</p>
+{%- if s.language or pub %}
+<p class="software__meta">
+{%- if s.language %}Written in {{ s.language }}{% if pub %}, accompanying {% else %}.{% endif %}{% elsif pub %}Accompanies {% endif -%}
+{%- if pub %}<a href="{{ '/publications/' | relative_url }}#{{ pub.id }}">{{ pub.title }}</a>.{% endif -%}
+</p>
+{%- endif %}
+</li>
+{%- endfor %}
+</ul>
