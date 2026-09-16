@@ -11,7 +11,7 @@ permalink: /teaching/
 A graduate course on inference from both frequentist and Bayesian standpoints. Topics span sampling distributions and the CLT, simulation and the bootstrap, point and interval estimators, posterior-based inference, and hypothesis tests built on confidence intervals, ratio tests, simulated null distributions and power. Students with an undergraduate WST major cannot take it for credit.
 
 ### STK 880 — Capita selecta: Statistics 880
-MCom/MSc Advanced Data Analytics (coursework) · 20 credits · NQF 9 · 2025 · [UP Yearbook 2025](https://www.up.ac.za/yearbooks/2025/pdf/module/STK%20880)
+A masters level course that covers current topics in advanced data analytics.
 
 ## Undergraduate
 
