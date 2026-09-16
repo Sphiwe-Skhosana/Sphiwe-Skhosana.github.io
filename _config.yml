@@ -35,15 +35,18 @@ author:
     - label: Google Scholar
       icon: googlescholar
       url: https://scholar.google.com/citations?user=tHMNOwwAAAAJ
+    - label: ResearchGate
+      icon: researchgate
+      url: 
     - label: ORCID
       icon: orcid
       url: https://orcid.org/0000-0002-4740-7540
     - label: GitHub
       icon: github
       url: https://github.com/Sphiwe-Skhosana
-    # - label: LinkedIn
-    #   icon: linkedin
-    #   url: https://www.linkedin.com/in/your-handle
+    - label: LinkedIn
+      icon: linkedin
+      url: https://www.linkedin.com/in/sphiwe-skhosana-74a8b9395
 
 # ── Build settings (no need to edit) ──────────────────────────────────────────
 markdown: kramdown
