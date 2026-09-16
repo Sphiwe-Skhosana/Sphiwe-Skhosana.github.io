@@ -35,9 +35,9 @@ author:
     - label: Google Scholar
       icon: googlescholar
       url: https://scholar.google.com/citations?user=tHMNOwwAAAAJ
-   # - label: ResearchGate
-     # icon: researchgate
-    #  url: 
+    - label: ResearchGate
+      icon: researchgate
+      url: https://www.researchgate.net/profile/Sphiwe_Skhosana
     - label: ORCID
       icon: orcid
       url: https://orcid.org/0000-0002-4740-7540
