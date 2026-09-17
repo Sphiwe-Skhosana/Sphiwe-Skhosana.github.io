@@ -1,0 +1,43 @@
+---
+title: Projects
+permalink: /projects/
+section: projects
+---
+{%- if site.sections.projects == true -%}
+{%- assign projects = site.data.projects -%}
+{%- assign n = projects | size -%}
+{%- if n > 0 %}
+<ul class="dated-list">
+{%- for p in projects %}
+<li>{% if p.period %}<span class="period">{{ p.period }}</span>{% else %}<span></span>{% endif %}
+<div>
+<p class="pub__title">{{ p.title }}</p>
+{%- if p.role %}
+<p class="project__role">{{ p.role }}</p>
+{%- endif %}
+{%- if p.description %}
+<div class="project__body">{{ p.description | markdownify }}</div>
+{%- endif %}
+{%- if p.partners %}
+<p class="project__partners">With {{ p.partners }}</p>
+{%- endif %}
+{%- if p.note %}
+<p class="pub__note">{{ p.note }}</p>
+{%- endif %}
+{%- if p.papers %}{% include related.html ids=p.papers %}{% endif -%}
+{%- if p.url or p.code %}
+<p class="links">
+{%- if p.url %}<a href="{{ p.url }}">{{ p.url_label | default: "Project page" }}</a>{% endif -%}
+{%- if p.code %}<a href="{{ p.code }}">Code</a>{% endif -%}
+</p>
+{%- endif %}
+</div>
+</li>
+{%- endfor %}
+</ul>
+{%- else %}
+<p>Nothing listed here yet.</p>
+{%- endif -%}
+{%- else %}
+<p>This page isn't available. <a href="{{ '/' | relative_url }}">Go to the home page</a>.</p>
+{%- endif %}
