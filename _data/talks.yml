@@ -11,9 +11,15 @@
 
 national:
   invited:
+    - year: 2026
+      title: Robust semiparametric mixtures of nonparametric regressions model
+      event: Centre of Excellence (CoE) in Mathematical and Statistical Sciences seminar series
+      location: University of the Witwatersrand
+      
     - year: 2025
-      event: Department of Economics seminar series
-      location: University of Pretoria
+      title: Estimating semi-parametric Gaussian mixtures of regressions with varying mixing proportions
+      event: Centre of Excellence (CoE) in Mathematical and Statistical Sciences seminar series
+      location: University of the Witwatersrand
   contributed:
     - year: 2025
       event: Department of Economics seminar series
