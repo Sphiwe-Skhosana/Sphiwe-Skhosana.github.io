@@ -21,8 +21,8 @@ appearance:
 # ── Optional sections ─────────────────────────────────────────────────────────
 # Set one to false to switch that section off: its header link disappears and
 # search engines are told to leave the page out.
-#sections:
- # projects: true
+sections:
+  projects: true
 
 # ── Profile (left sidebar) ────────────────────────────────────────────────────
 author:
