@@ -28,7 +28,3 @@ Circular responses such as directions, angles and times of year are common in bi
 Neural networks, fitted through a neural-network EM algorithm, can replace parametric forms for the mixing proportions and component effects to capture nonlinear structure. Applications include varying-coefficient mixtures for binary responses and latent class joint models for longitudinal and time-to-event data.
 
 {% include related.html ids="harris2026deep" %}
-
-## Applications to African data
-
-I apply these methods to household energy poverty in South Africa and to the relationship between economic growth and environmental quality across Sub-Saharan Africa.
