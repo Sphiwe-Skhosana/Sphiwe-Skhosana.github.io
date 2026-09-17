@@ -10,7 +10,7 @@ lang: en-ZA
 
 # ── Appearance ────────────────────────────────────────────────────────────────
 appearance:
-  palette: jacaranda  # jacaranda | navy | teal | forest | crimson | ochre | slate | ink
+  palette: forest  # jacaranda | navy | teal | forest | crimson | ochre | slate | ink
                       # Palettes live in _data/palettes.yml; add your own there.
   accent: ""          # Any hex colour, e.g. "#0b6e4f". Overrides the palette when set.
   accent_dark: ""     # Accent for dark mode. Derived from `accent` when left empty.
