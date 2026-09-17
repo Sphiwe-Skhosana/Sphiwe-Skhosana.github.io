@@ -111,24 +111,6 @@ tau <- pi_k * dnorm(y, mu_k, sigma_k) / f_y
 
 `math: true` loads KaTeX for that page only. Single dollar signs are not treated as maths.
 
-## Before going live
-
-- Fill in `email`, `pronouns` and `avatar` under `author` in `_config.yml`, or leave them empty to hide them.
-- Read `index.md` and `research.md`: they are drafts written from your published work.
-- `_data/software.yml` has DeepVCM and KernelVCM.Fit commented out; remove the `#` signs once their repositories are public.
-- Upload `files/cv.pdf` if you want a CV page.
-
-## Preview on your computer (optional)
-
-With Ruby and Bundler installed:
-
-```sh
-bundle install
-bundle exec jekyll serve
-```
-
-Then open <http://localhost:4000>. The `github-pages` gem in the `Gemfile` matches the versions GitHub uses.
-
 ## Files
 
 ```
