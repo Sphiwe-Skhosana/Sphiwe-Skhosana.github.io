@@ -10,7 +10,7 @@ lang: en-ZA
 
 # ── Appearance ────────────────────────────────────────────────────────────────
 appearance:
-  palette: jacaranda  # jacaranda | navy | teal | forest | crimson | ochre | slate | ink
+  palette: forest  # jacaranda | navy | teal | forest | crimson | ochre | slate | ink
                       # Palettes live in _data/palettes.yml; add your own there.
   accent: ""          # Any hex colour, e.g. "#0b6e4f". Overrides the palette when set.
   accent_dark: ""     # Accent for dark mode. Derived from `accent` when left empty.
@@ -33,24 +33,26 @@ author:
   institution: University of Pretoria
   institution_url: https://www.up.ac.za
   location: Pretoria, South Africa
-  avatar: ""   # e.g. /images/profile.jpg. Your initials are shown until you add a photo.
-  email: ""    # Shown as an "Email" link when set
+  avatar: /images/Sphiwe.png #Your initials are shown until you add a photo.
+  email: spiwe.skhosana@up.ac.za
   # Shown in this order. Icons: googlescholar orcid github linkedin researchgate
   # bluesky x mastodon youtube link
   links:
     - label: Google Scholar
       icon: googlescholar
       url: https://scholar.google.com/citations?user=tHMNOwwAAAAJ
+    - label: Research Gate
+      icon: research gate
+      url: https://www.researchgate.net/profile/Sphiwe_Skhosana
     - label: ORCID
       icon: orcid
       url: https://orcid.org/0000-0002-4740-7540
     - label: GitHub
       icon: github
       url: https://github.com/Sphiwe-Skhosana
-    # - label: LinkedIn
-    #   icon: linkedin
-    #   url: https://www.linkedin.com/in/your-handle
-
+    - label: LinkedIn
+      icon: linkedin
+      url: https://www.linkedin.com/in/sphiwe-skhosana-74a8b9395
 # ── Build settings (no need to edit) ──────────────────────────────────────────
 markdown: kramdown
 kramdown:
