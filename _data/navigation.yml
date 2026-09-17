@@ -1,14 +1,17 @@
 # Header links, in order.
 # `hide_if_empty` keeps a link out of the header until its section has content:
-# a data file name (talks), `posts`, or a file path (/files/cv.pdf).
+# a data file name (e.g. software), `posts`, or a file path (/files/cv.pdf).
+# `section` ties a link to a switch under `sections` in _config.yml.
 
 - title: Research
   url: /research/
+- title: Projects
+  url: /projects/
+  section: projects
 - title: Publications
   url: /publications/
 - title: Talks
   url: /talks/
-  hide_if_empty: talks
 - title: Software
   url: /software/
 - title: Teaching
