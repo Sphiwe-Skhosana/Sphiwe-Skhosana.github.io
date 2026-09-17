@@ -2,14 +2,44 @@
 title: Talks
 permalink: /talks/
 ---
-{%- assign n = site.data.talks | size %}
+{%- comment -%} Entries come from _data/talks.yml. Lists with no entries are left out. {%- endcomment -%}
+{%- assign sections = "national|National,international|International" | split: "," -%}
+{%- assign kinds = "invited|Invited,contributed|Contributed,poster|Posters" | split: "," -%}
+{%- for section in sections -%}
+{%- assign s = section | split: "|" -%}
+{%- assign skey = s[0] -%}
+{%- assign group = site.data.talks[skey] -%}
+{%- assign total = 0 -%}
+{%- for kind in kinds -%}
+{%- assign kkey = kind | split: "|" | first -%}
+{%- assign n = group[kkey] | size -%}
+{%- assign total = total | plus: n -%}
+{%- endfor -%}
+{%- if total > 0 %}
+<h2 id="{{ skey }}">{{ s[1] }}</h2>
+{%- for kind in kinds -%}
+{%- assign k = kind | split: "|" -%}
+{%- assign kkey = k[0] -%}
+{%- assign items = group[kkey] -%}
+{%- assign n = items | size -%}
 {%- if n > 0 %}
+<h3 id="{{ skey }}-{{ kkey }}">{{ k[1] }}</h3>
 <ul class="dated-list">
-{%- for t in site.data.talks %}
-<li><time datetime="{{ t.date | date: '%Y-%m-%d' }}">{{ t.date | date: "%b %Y" }}</time>
+{%- for t in items %}
+{%- capture event -%}
+{%- if t.url %}<a href="{{ t.url }}">{{ t.event }}</a>{% else %}{{ t.event }}{% endif %}{% if t.location %}, {{ t.location }}{% endif -%}
+{%- endcapture %}
+<li>{% if t.date %}<time datetime="{{ t.date | date: '%Y-%m-%d' }}">{{ t.date | date: "%b %Y" }}</time>{% else %}<time>{{ t.year }}</time>{% endif %}
 <div>
+{%- if t.title %}
 <p class="talk__title">{{ t.title }}</p>
-<p class="talk__event">{% if t.url %}<a href="{{ t.url }}">{{ t.event }}</a>{% else %}{{ t.event }}{% endif %}{% if t.location %}, {{ t.location }}{% endif %}</p>
+<p class="talk__event">{{ event }}</p>
+{%- else %}
+<p>{{ event }}</p>
+{%- endif %}
+{%- if t.note %}
+<p class="talk__note">{{ t.note }}</p>
+{%- endif %}
 {%- if t.slides %}
 <p class="links"><a href="{{ t.slides | relative_url }}">Slides</a></p>
 {%- endif %}
@@ -17,6 +47,7 @@ permalink: /talks/
 </li>
 {%- endfor %}
 </ul>
-{%- else %}
-<p>No talks listed yet.</p>
-{%- endif %}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{%- endfor %}
