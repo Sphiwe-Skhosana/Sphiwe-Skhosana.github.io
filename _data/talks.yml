@@ -11,7 +11,6 @@
 
 national:
   invited:
-
   contributed:
     - year: 2025
       event: Department of Economics seminar series
@@ -32,7 +31,6 @@ national:
     - year: 2022
       event: Annual International Symposium on Modern Biostatistics and Machine Learning
       location: University of Pretoria
-
   poster:
     - year: 2024
       event: Faculty of Natural and Agricultural Sciences Research Symposium
@@ -41,31 +39,25 @@ national:
 
 international:
   invited:
-
   contributed:
     - year: 2025
       title: Estimating semi-parametric Gaussian mixtures of non-parametric regressions with an application in environmental economics
       event: CMStatistics 2025
       location: Birkbeck, University of London, UK
-
     - year: 2024
       title: A new approach to estimate semi-parametric Gaussian mixtures of regressions with varying mixing proportions
       event: COMPSTAT 2024
       location: Justus Liebig University Giessen, Germany
-
     - year: 2023
       title: A new approach to estimate semi-parametric Gaussian mixtures of non-parametric regressions
       event: CMStatistics 2023
       location: HTW Berlin, Germany
-
     - year: 2022
       title: A one-step backfitting algorithm for estimating the semi-parametric mixture of partial linear models
       event: CMStatistics 2022
       location: King’s College London, UK
-
     - year: 2021
       title: A possible solution to the label-switching problem in fitting non-parametric mixture of regressions
       event: CMStatistics 2021
       location: King’s College London, UK
-
   poster:
