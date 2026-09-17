@@ -19,13 +19,13 @@ A masters level course that covers current topics in advanced data analytics.
 A first-year course on foundational data literacy: what data are, where they come from and how they are classified; sampling and data collection; presenting data; and handling data ethically, including importing, cleaning and manipulating it. Ideas are illustrated with Excel and simulation.
 
 ### STC 147-Foundational statistics 147
-Second-semester companion to STC 137: exploratory analysis with tables, charts and summary measures of centre and spread; basic probability and counting rules; and how descriptive, inferential and predictive goals differ. Taught through Excel and simulation.
+Second-semester companion to STC 137: exploratory analysis with tables, charts and summary measures of centre and spread; basic probability and counting rules; and how descriptive, inferential and predictive goals differ. Taught through Excel.
 
 ### STK 210-Statistics 210
-A second year course on probability as the basis for statistical problem solving: causality and experimental versus observational data; discrete, continuous and multivariate random variables and their distributions; stochastic representations; expectation, conditional expectation and measures of association; and simulation. Supporting mathematics is developed alongside coding.
+A second year course on probability as the basis for statistical problem solving: causality and experimental versus observational data; discrete, continuous and multivariate random variables and their distributions; stochastic representations; expectation, conditional expectation and measures of association; and simulation. Statistical algorithms and simulation are implemented using SAS (Statistical Analysis System)
 
 ### STK 220-Statistics 220
-Builds on STK 210, moving from probability to inference and modelling: multivariate distributions, the CLT and sampling distributions, frequentist and Bayesian approaches to inference, decision theory and statistical learning, linear regression (estimation and inference) and nonparametric models. Statistical algorithms and simulation are implemented using SAS (Statistical Analysis System)
+Builds on STK 210, moving from probability to inference and modelling: multivariate distributions, the CLT and sampling distributions, frequentist and Bayesian approaches to inference, decision theory and statistical learning, linear regression (estimation and inference) and nonparametric models.
 
 ### JGI 220-Statistics for teachers 220
 Introductory statistics for BEd students in the Intermediate and Senior/FET phases: gathering data in educational settings and summarising it with tables, graphs and measures of centre and spread; basic probability and standard distributions; sampling distributions, estimation and one- and two-sample tests for means and proportions; and selecting and interpreting statistical software.
@@ -37,4 +37,4 @@ An introductory course in distribution theory built around the standard discrete
 Introductory statistics in two parts. The first describes data: sampling and collection, frequency tables and graphs, and measures of centre and spread. The second covers probability, standard and sampling distributions, and estimation and one- and two-sample tests for means and proportions. Supporting mathematics is included, and ideas are demonstrated through coding and simulation.
 
 ### STK 120-Statistics 120
-Second-semester module on ANOVA, categorical-data and nonparametric methods, regression, correlation and curve fitting, and time series and index numbers, plus quantitative tools for economics: solving linear systems, optimisation, linear and non-linear functions, marginal and total functions, and stochastic versus deterministic variables (consumer and producer surplus). Simulation is used to illustrate ideas. Terminating module; credit for only one of STK 120 and STK 121.
+Builds on STK 110 to include categorical-data and nonparametric methods, regression, correlation and curve fitting, and time series and index numbers, plus quantitative tools for economics: solving linear systems, optimisation, linear and non-linear functions, marginal and total functions, and stochastic versus deterministic variables (consumer and producer surplus). 
