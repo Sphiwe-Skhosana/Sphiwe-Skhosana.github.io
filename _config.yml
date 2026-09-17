@@ -33,7 +33,7 @@ author:
   institution: University of Pretoria
   institution_url: https://www.up.ac.za
   location: Pretoria, South Africa
-  avatar: /images/Sphiwe.png Your initials are shown until you add a photo.
+  avatar: /images/Sphiwe.png #Your initials are shown until you add a photo.
   email: spiwe.skhosana@up.ac.za
   # Shown in this order. Icons: googlescholar orcid github linkedin researchgate
   # bluesky x mastodon youtube link
@@ -41,6 +41,9 @@ author:
     - label: Google Scholar
       icon: googlescholar
       url: https://scholar.google.com/citations?user=tHMNOwwAAAAJ
+    - label: Research Gate
+      icon: research gate
+      url: https://www.researchgate.net/profile/Sphiwe_Skhosana
     - label: ORCID
       icon: orcid
       url: https://orcid.org/0000-0002-4740-7540
@@ -50,9 +53,6 @@ author:
     - label: LinkedIn
       icon: linkedin
       url: https://www.linkedin.com/in/sphiwe-skhosana-74a8b9395
-    - label: Research Gate
-      icon: research gate
-      url: https://www.researchgate.net/profile/Sphiwe_Skhosana
 # ── Build settings (no need to edit) ──────────────────────────────────────────
 markdown: kramdown
 kramdown:
