@@ -6,35 +6,61 @@ section: projects
 {%- if site.sections.projects == true -%}
 {%- assign projects = site.data.projects -%}
 {%- assign n = projects | size -%}
-{%- if n > 0 %}
-<ul class="dated-list">
+{%- if n > 0 -%}
 {%- for p in projects %}
-<li>{% if p.period %}<span class="period">{{ p.period }}</span>{% else %}<span></span>{% endif %}
-<div>
-<p class="pub__title">{{ p.title }}</p>
-{%- if p.role %}
-<p class="project__role">{{ p.role }}</p>
+{%- assign pis = p.principal_investigators -%}
+{%- assign cois = p.co_investigators -%}
+<article class="project">
+<h2 class="project__title">{{ p.title }}</h2>
+{%- if p.period or pis or cois or p.funding %}
+<dl>
+{%- if p.period %}
+<dt>Period</dt>
+<dd>{{ p.period }}</dd>
+{%- endif %}
+{%- if pis %}
+<dt>{% if pis.first and pis.size > 1 %}Principal investigators{% else %}Principal investigator{% endif %}</dt>
+<dd>{{ pis | join: ", " }}</dd>
+{%- endif %}
+{%- if cois %}
+<dt>{% if cois.first and cois.size > 1 %}Co-investigators{% else %}Co-investigator{% endif %}</dt>
+<dd>{{ cois | join: ", " }}</dd>
+{%- endif %}
+{%- if p.funding %}
+<dt>Funding</dt>
+<dd>{{ p.funding }}</dd>
+{%- endif %}
+</dl>
 {%- endif %}
 {%- if p.description %}
-<div class="project__body">{{ p.description | markdownify }}</div>
+<h3 class="project__label">Description</h3>
+{{ p.description | markdownify }}
 {%- endif %}
-{%- if p.partners %}
-<p class="project__partners">With {{ p.partners }}</p>
+{%- if p.outcomes %}
+<h3 class="project__label">Expected outcomes</h3>
+{%- if p.outcomes.first %}
+<ul>
+{%- for outcome in p.outcomes %}
+<li>{{ outcome | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+{%- endfor %}
+</ul>
+{%- else %}
+{{ p.outcomes | markdownify }}
+{%- endif -%}
 {%- endif %}
-{%- if p.note %}
-<p class="pub__note">{{ p.note }}</p>
+{%- if p.papers %}
+{%- assign paper_ids = p.papers | split: " " %}
+<h3 class="project__label">{% if paper_ids.size > 1 %}Related publications{% else %}Related publication{% endif %}</h3>
+{% include related.html ids=p.papers %}
 {%- endif %}
-{%- if p.papers %}{% include related.html ids=p.papers %}{% endif -%}
 {%- if p.url or p.code %}
 <p class="links">
 {%- if p.url %}<a href="{{ p.url }}">{{ p.url_label | default: "Project page" }}</a>{% endif -%}
 {%- if p.code %}<a href="{{ p.code }}">Code</a>{% endif -%}
 </p>
 {%- endif %}
-</div>
-</li>
+</article>
 {%- endfor %}
-</ul>
 {%- else %}
 <p>Nothing listed here yet.</p>
 {%- endif -%}
