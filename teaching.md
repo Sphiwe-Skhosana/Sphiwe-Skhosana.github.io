@@ -8,7 +8,7 @@ permalink: /teaching/
 
 ### MET 720-Statistical Inference
 
-A graduate course on inference from both frequentist and Bayesian standpoints. Topics span sampling distributions and the CLT, simulation and the bootstrap, point and interval estimators, posterior-based inference, and hypothesis tests built on confidence intervals, ratio tests, simulated null distributions and power. Students with an undergraduate WST major cannot take it for credit.
+A graduate course on inference from both frequentist and Bayesian standpoints. Topics span point and interval estimation, posterior-based inference, and hypothesis tests built on confidence intervals, ratio tests, null distributions and power.
 
 ### STK 880-Capita selecta: Statistics 880
 A masters level course that covers current topics in advanced data analytics.
@@ -25,7 +25,7 @@ Second-semester companion to STC 137: exploratory analysis with tables, charts a
 A second year course on probability as the basis for statistical problem solving: causality and experimental versus observational data; discrete, continuous and multivariate random variables and their distributions; stochastic representations; expectation, conditional expectation and measures of association; and simulation. Supporting mathematics is developed alongside coding.
 
 ### STK 220-Statistics 220
-Builds on STK 210, moving from probability to inference and modelling: multivariate distributions, the CLT and sampling distributions, frequentist and Bayesian approaches to inference, decision theory and statistical learning, linear regression (estimation and inference) and nonparametric models. Statistical algorithms and simulation are implemented in code.
+Builds on STK 210, moving from probability to inference and modelling: multivariate distributions, the CLT and sampling distributions, frequentist and Bayesian approaches to inference, decision theory and statistical learning, linear regression (estimation and inference) and nonparametric models. Statistical algorithms and simulation are implemented using SAS (Statistical Analysis System)
 
 ### JGI 220-Statistics for teachers 220
 Introductory statistics for BEd students in the Intermediate and Senior/FET phases: gathering data in educational settings and summarising it with tables, graphs and measures of centre and spread; basic probability and standard distributions; sampling distributions, estimation and one- and two-sample tests for means and proportions; and selecting and interpreting statistical software.
