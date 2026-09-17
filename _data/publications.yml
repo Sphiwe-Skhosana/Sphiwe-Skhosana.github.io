@@ -1,7 +1,12 @@
 # Newest first within each type. The Publications page groups entries by `type`:
-#   article | preprint | chapter | proceedings
-# Optional links: doi (without https://doi.org/), arxiv (id only), pdf, code, slides.
+#   article | chapter | preprint | proceedings | thesis
+# Links (all optional): doi (without https://doi.org/), arxiv (id only), pdf, code, slides,
+#   and url with url_label for any other page, such as a repository record.
+# Other optional fields: details (volume, issue, pages), note (e.g. an award),
+#   editors and publisher (chapters), venue_short (shorter venue on the Research page).
 # `id` must be unique: the Research and Software pages link to papers by id.
+
+# ── Journal articles ──────────────────────────────────────────────────────────
 
 - id: harris2026deep
   type: article
@@ -28,7 +33,7 @@
   authors: Skhosana, S. B., Millard, S. M., & Kanfer, F. H. J.
   year: 2024
   venue: Statistics and Computing
-  details: 34, 125
+  details: 34(4), 125
   doi: 10.1007/s11222-024-10435-3
   code: https://github.com/Sphiwe-Skhosana/SPGMNRs_Model
 
@@ -50,6 +55,42 @@
   details: 14(5), 1058
   doi: 10.3390/sym14051058
 
+# ── Book chapters ─────────────────────────────────────────────────────────────
+
+- id: skhosana2024new
+  type: chapter
+  title: A new approach to estimate semi-parametric Gaussian mixtures of regressions with varying mixing proportions
+  authors: Skhosana, S. B., Millard, S. M., & Kanfer, F. H. J.
+  year: 2024
+  editors: "C. A. Coelho & D.‑G. Chen"
+  venue: "Statistical Modeling and Applications: Multivariate, Heavy-Tailed, Skewed Distributions and Mixture Modeling, Volume 2"
+  venue_short: Statistical Modeling and Applications (Springer)
+  details: pp. 149–175
+  publisher: Springer
+  doi: 10.1007/978-3-031-69622-0_8
+
+# ── Preprints and working papers ──────────────────────────────────────────────
+
+- id: skhosana2026shifted
+  type: preprint
+  title: Shifted asymmetric Laplace mixtures of experts
+  authors: Skhosana, S. B., & Nguyen, H. D.
+  year: 2026
+  venue: arXiv preprint
+  details: arXiv:2605.02012
+  arxiv: 2605.02012
+
+- id: skhosana2026economic
+  type: preprint
+  title: Economic complexity and environmental impact using a neural-network embedded semiparametric mixture of experts model
+  authors: Skhosana, S. B., Olaniran, A. O., Nakhaei Rad, N., & Gupta, R.
+  year: 2026
+  venue: University of Pretoria, Department of Economics Working Paper Series
+  venue_short: University of Pretoria Economics working paper
+  details: No. 202618
+  url: https://ideas.repec.org/p/pre/wpaper/202618.html
+  url_label: RePEc
+
 - id: skhosana2026nonparametric
   type: preprint
   title: Nonparametric contaminated Gaussian mixture of regressions
@@ -69,3 +110,15 @@
   details: arXiv:2601.12425
   arxiv: 2601.12425
   code: https://github.com/Sphiwe-Skhosana/S-CG-MoLE
+
+# ── Thesis ────────────────────────────────────────────────────────────────────
+
+- id: skhosana2024essays
+  type: thesis
+  title: Essays on estimation strategies addressing label-switching in Gaussian mixtures of semi- and non-parametric regressions
+  authors: Skhosana, S. B.
+  year: 2024
+  venue: PhD thesis, University of Pretoria
+  note: Winner of the 2025 Distinguished Dissertation Award, The Classification Society
+  url: https://repository.up.ac.za/items/d1b044ce-3ccd-48ee-be2b-646277c74e8d
+  url_label: UPSpace

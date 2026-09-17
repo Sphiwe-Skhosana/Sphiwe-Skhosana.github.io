@@ -1,9 +1,71 @@
-# Newest first. "Talks" appears in the header once this file has an entry.
-# Remove the # signs below and fill in your details.
+# Talks page: National and International, each split into Invited, Contributed and Posters.
+# List entries newest first. A heading appears on the page once its list has an entry.
+#
+#   - year: 2027                       # or `date: 2027-03-14` to show the month
+#     title: Title of the talk          # optional
+#     event: Conference or seminar name
+#     location: Venue, City, Country
+#     note: Best presentation award     # optional
+#     url: https://example.org/event    # optional: event page
+#     slides: /files/slides-2027.pdf    # optional: upload the file to files/
 
-# - date: 2026-11-05
-#   title: Title of the talk
-#   event: Conference or seminar name
-#   location: City, Country
-#   url: https://example.org/event   # optional: event page
-#   slides: /files/slides-2026.pdf    # optional: upload the file to files/
+national:
+  invited:
+
+  contributed:
+    - year: 2025
+      event: Department of Economics seminar series
+      location: University of Pretoria
+
+    - year: 2024
+      event: Department of Economics seminar series
+      location: University of Pretoria
+
+    - year: 2023
+      event: SAMSA Conference
+      location: University of Pretoria
+
+    - year: 2023
+      event: Annual International Symposium on Modern Biostatistics and Machine Learning
+      location: University of Pretoria
+
+    - year: 2022
+      event: Annual International Symposium on Modern Biostatistics and Machine Learning
+      location: University of Pretoria
+
+  poster:
+    - year: 2024
+      event: Faculty of Natural and Agricultural Sciences Research Symposium
+      location: University of Pretoria
+      note: First prize, poster competition
+
+international:
+  invited:
+
+  contributed:
+    - year: 2025
+      title: Estimating semi-parametric Gaussian mixtures of non-parametric regressions with an application in environmental economics
+      event: CMStatistics 2025
+      location: Birkbeck, University of London, UK
+
+    - year: 2024
+      title: A new approach to estimate semi-parametric Gaussian mixtures of regressions with varying mixing proportions
+      event: COMPSTAT 2024
+      location: Justus Liebig University Giessen, Germany
+
+    - year: 2023
+      title: A new approach to estimate semi-parametric Gaussian mixtures of non-parametric regressions
+      event: CMStatistics 2023
+      location: HTW Berlin, Germany
+
+    - year: 2022
+      title: A one-step backfitting algorithm for estimating the semi-parametric mixture of partial linear models
+      event: CMStatistics 2022
+      location: King’s College London, UK
+
+    - year: 2021
+      title: A possible solution to the label-switching problem in fitting non-parametric mixture of regressions
+      event: CMStatistics 2021
+      location: King’s College London, UK
+
+  poster:
