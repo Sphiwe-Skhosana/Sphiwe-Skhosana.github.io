@@ -34,7 +34,7 @@ author:
   institution_url: https://www.up.ac.za
   location: Pretoria, South Africa
   avatar: "/images/Sphiwe.png" # Your initials are shown until you add a photo.
-  email: "spiwe.skhosana@up.ac.za"
+  email: "spiwe.skhosana@up.ac.za" 
   # Shown in this order. Icons: googlescholar orcid github linkedin researchgate
   # bluesky x mastodon youtube link
   links:
