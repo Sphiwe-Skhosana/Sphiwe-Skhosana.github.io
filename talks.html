@@ -40,8 +40,11 @@ permalink: /talks/
 {%- if t.note %}
 <p class="talk__note">{{ t.note }}</p>
 {%- endif %}
-{%- if t.slides %}
-<p class="links"><a href="{{ t.slides | relative_url }}">Slides</a></p>
+{%- if t.slides or t.video %}
+<p class="links">
+{%- if t.slides %}<a href="{{ t.slides | relative_url }}">Slides</a>{% endif -%}
+{%- if t.video %}<a href="{{ t.video | relative_url }}">Video</a>{% endif -%}
+</p>
 {%- endif %}
 </div>
 </li>
