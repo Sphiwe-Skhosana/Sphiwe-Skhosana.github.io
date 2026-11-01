@@ -50,6 +50,10 @@ national:
 
 international:
   invited:
+    - year: 2026
+      title: Robust semiparametric mixtures of nonparametric regressions model
+      event: CMStatistics 2026
+      location: Berlin, Germany
   contributed:
     - year: 2025
       title: Estimating semi-parametric Gaussian mixtures of non-parametric regressions with an application in environmental economics
