@@ -1,7 +1,7 @@
 # Newest first. The home page shows the first 8. `text` accepts Markdown.
-- date: 2026-10-16
+- date: 2026-11-13
   text: >-
-    My paper (with Weixin Yao) titled: "Nonparametric contaminated Gaussian mixture of regressions" has been accepted by Advances in Data Analysis and Classification!
+    New paper [Nonparametric contaminated Gaussian mixture of regressions](https://doi.org/10.1007/s11634-026-00716-2) published in *Advances in Data Analysis and Classification*!
     
 - date: 2026-08-31
   text: >-
@@ -22,5 +22,5 @@
 
 - date: 2024-05-29
   text: >-
-    [A modified EM-type algorithm to estimate semi-parametric mixtures of non-parametric regressions](https://doi.org/10.1007/s11222-024-10435-3)
+    New paper [A modified EM-type algorithm to estimate semi-parametric mixtures of non-parametric regressions](https://doi.org/10.1007/s11222-024-10435-3)
     is published in *Statistics and Computing*.
